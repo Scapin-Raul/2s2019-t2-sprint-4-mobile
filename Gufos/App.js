@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Fragment} from 'react';
 import {
   SafeAreaView,
@@ -26,33 +18,20 @@ import {
 
 const App = () => {
   return (
-    <Fragment style={styles.background}>
+    <Fragment>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          {/* <Header /> */}
+          <Header />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>ALO</Text>
-              <Text style={styles.sectionDescription}>
-                aefjioajf <Text style={styles.highlight}>kkj</Text> awerUJBGY
-                78r nhujbaibfaj
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>awfqfq</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            
+            <Text>Hello World</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -61,11 +40,6 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  
-  background: {
-    backgroundColor: Colors.black,
-  },
-  
   scrollView: {
     backgroundColor: Colors.lighter,
   },
@@ -74,7 +48,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: '#131313',
+    backgroundColor: Colors.white,
   },
   sectionContainer: {
     marginTop: 32,
