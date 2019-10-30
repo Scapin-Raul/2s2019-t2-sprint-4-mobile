@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet,View,Text,Image} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 
 class Main extends Component {
-  // apresentar a lista de eventos
+  
+  static navigationOptions={
+    tabBarIcon: ()=>(
+      <Image source={require('../assets/img/calendar.png')}
+      style={styles.ImagemIcone}/>
+    )
+  }
 
   constructor() {
     super();
@@ -30,13 +36,27 @@ class Main extends Component {
         keyExtractor={item => item.idEvento}
         renderItem={({item}) => (
           <View>
-            <Text>{item.titulo}</Text>
-            <Text>{item.dataEvento}</Text>
+            <Text style={styles.Titulo}>{item.titulo}</Text>
+            <Text style={styles.red}>{item.dataEvento}</Text>
           </View>
         )}
       />
     );
   }
 }
+
+const styles = StyleSheet.create({
+  Titulo: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: 'blue',
+  },
+  red: 
+  {
+    color: 'red',
+  },
+  ImagemIcone:{width:25,height:25, tintColor: '#00ffff'}
+});
+
 
 export default Main;
